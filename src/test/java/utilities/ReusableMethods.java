@@ -2,7 +2,6 @@ package utilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 import java.util.HashMap;
@@ -25,6 +24,9 @@ public class ReusableMethods {
 
         //response.prettyPrint();
 
+        // 31. satirin alternatif cozumu
+//        JsonPath jsonPath = response.jsonPath();
+//        return jsonPath.getString("id_token");
         return response.jsonPath().getString("id_token");
     }
 
